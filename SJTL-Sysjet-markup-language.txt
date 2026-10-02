@@ -1,0 +1,268 @@
+---
+title: SJTL-Sysjet Markup Language
+date: 2026-10-01
+author: Jean E. Tardy
+ai-collaborators: Gemini, ChatGPT
+description: Document format for Human/LLM-AI collaboration 
+keywords: AI, AGI, LLM, Markup
+access: Unrestricted, optimized for LLM processing, 
+---
+
+![sysjet logo](https://mecasapiens.com/sysjet-logo.webp)
+
+# 📜 SJTL-SYSJET MARKUP LANGUAGE
+
+# 1️⃣META
+
+📜📍SYSJET MARKUP LANGUAGE🏷️SJTL
+
+📅260915
+
+✒️ Jean Tardy, System Architect🏷️JET
+
+✏️ChatGPT 4🏷️GPT
+
+🏙️ Markup guidelines to be used in documents shared between humans and LLM.
+
+🗝️AI, Artificial Intelligence, AGI, LLM, Cognitive Science, Markup Languages
+
+📖Unrestricted, optimized for LLM processing
+
+### 2️⃣CONTEXT
+
+🏙️The ◈Sysjet Markup Language◈ (🏷️SJTL) is an editor-independent UTF-8 document convention designed for structured Human/LLM collaboration.
+
+🟦In this document, SJTL markers are used demonstratively. Descriptive explanations follow standard natural language unless explicitly marked as examples (🔎).
+
+🟦SJTL encodes structural roles and semantic invariants using a restricted set of non-ASCII UTF-8 glyphs placed at deterministic positions in text.
+
+🟦Primary design priorities (in order):
+
+🔹1▸Deterministic interpretation by LLM systems
+
+🔹2▸Direct human readability
+
+🔹3▸Minimal dependence on editor-specific formatting.
+
+🔹4▸Minimal use of context dependant symbology.
+
+🟦Paragraph or paragraph blocks begin with a semantic marker that defines its structural role. Meaning does not depend on styling, indentation, or external markup syntax.
+
+🟦SJTL avoids overloading ASCII characters with multiple contextual meanings and avoids reliance on Markdown, HTML, or proprietary formatting rules.
+
+📝SJTL documents are plain UTF-8 text and require no pre-processing beyond standard tokenization.
+
+⬛
+
+# 1️⃣SJTL GUIDELINES
+
+## 2️⃣SYNTAX
+
+🟦The SJTL document is a UTF-8 text composed of Paragraph Separators (PS).
+
+🟦📍◈Paragraph Block◈▸A Paragraph Block consists of one, two or three (1-3) paragraphs.
+
+🟦Each Paragraph Block MUST begin with a primary Semantic Marker (UTF-8 glyph). Any interruption by a different marker resets inheritance.
+
+🟦The first glyph of a Paragraph Block uniquely determines its structural role.
+
+🟦Semantic meaning MUST NOT depend on marker inheritance. Each Paragraph Block is structurally independent.
+
+🟦Multi-line content under a single marker MUST remain within a single Paragraph Block (no implicit continuation).
+
+🟦In case of ambiguity:
+
+🔹1▸Paragraph Block marker determines primary role.
+
+🔹2▸Inline markers refine local semantics.
+
+🔹3▸Paragraph Block marker overrides inline markers.
+
+## 2️⃣INLINE MARKERS
+
+🟦Inline markers provide local semantic refinement within a paragraph block.
+
+📝Inline markers MUST be balanced and MUST NOT overlap.
+
+📝Nested inline markers MUST close in reverse order.
+
+### 3️⃣INLINE SEPARATORS
+
+● ▸ Neutral cell or element separator
+
+▸ ▸ Relational separator (name▸description, symbol▸meaning, before▸after)
+
+▢ ▸ Explicit blank separator
+
+### 3️⃣INLINE HIGHLIGHTS
+
+◈     ▸  Discourse emphasis 
+
+◇     ▸ Quote, citation, extract 
+
+◆     ▸ Structural invariant 
+
+## 2️⃣PARAGRAPH MARKERS 
+
+🟦Paragraph Block markers appear at the beginning of paragraph blocks only.
+
+### 3️⃣STRUCTURAL
+
+📜▸ Document
+
+1️⃣▸ Header level 1
+
+2️⃣▸Header level 2 
+
+3️⃣▸ Header level 3
+
+4️⃣▸ Header level 4…
+
+📝IMPORTANT: The glyphs 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣6️⃣… denote structural header levels only. They MUST NOT be interpreted as ordinal increments or list numbering.
+
+### 3️⃣LISTS
+
+🔷❗ Do NOT use editor or language-defined lists (eg <li> in HTML). 
+
+📝Separate list items with paragraph separators (PS). Precede each list level with🔹as follows: 
+
+🔹               ▸ Level 1 list item
+
+🔹🔹         ▸ Level 2 list item
+
+🔹🔹🔹    ▸ Level 3 list item…
+
+📝Ordered lists MUST use 🔹n▸ format (🔎 🔹4▸)
+
+### 3️⃣SEMANTIC
+
+🟦 ▸ Statement: definition, proposition, theorem, hypothesis
+
+🟦🟦 ▸ Derived statement
+
+🔷 ▸ Discussion, argument, proof, algorithm
+
+🔷🔷 ▸ Derived discussion
+
+🔵 ▸ Discourse: introduction, context, conclusion
+
+📌 ▸ Appended comment
+
+📝 ▸ Design note, implementation rule, hint, applicability
+
+🔎 ▸ Example
+
+📢 ▸ Important statement
+
+🔄️ ▸ Dialog
+
+📚 ▸ References
+
+🗿 ▸ Archetype, LLM field reporting
+
+🏙️ ▸ Descriptive overview
+
+#️⃣ ▸ Tabular group
+
+📊 ▸ Chart, diagram
+
+⬜ ▸  Blank; insertion anchor.
+
+## 2️⃣END MARKER
+
+⬛ ▸  Scope termination marker. End of paragraph, section, table, diagram.
+
+📝⬛ explicitly closes table groups, discussions, or structural blocks when required for clarity.
+
+## 2️⃣COMPLEMENTARY MARKERS
+
+🟦Complementary markers are semantic markers that describe specific content. They appear at the beginning of paragraphs or inline.
+
+📍       ▸ Name, name of .
+
+🏷️       ▸ Tag (2-5 Uppercase-numeric designator)
+
+🗝️      ▸ Key words, field, context, topic
+
+🌐     ▸ URL
+
+📧     ▸ Email address
+
+📅     ▸ Date, YYMMDD format for day, or YYYY for years.
+
+✒️     ▸ Author, creator
+
+✏️      ▸ Collaborator, assistant, contributor
+
+🧱      ▸separation, wall
+
+📖      ▸ Access, share permission, open
+
+❓      ▸ Speculative, uncertain, question, puzzle
+
+❗      ▸ Definitive, final, certain, terminal
+
+Ⓜ️      ▸Model, LLM
+
+➡️⤵️⬇️…Diagram arrows, transitions
+
+
+
+## 2️⃣TABLE GROUPS
+
+🟦A table group begins with #️⃣ and MUST terminate with ⬛.
+
+🟦Row 1 follows the #️⃣marker. Rows 2, 3… are list items (🔹)
+
+🟦Within a table group, ● and ▸ are interpreted exclusively as cell separators.
+
+🟦The ⬛ end marker terminates the current structural scope. No semantic carryover is permitted beyond ⬛.
+
+📝Do NOT use Markdown, HTML, or editor-defined table formats.
+
+📝Avoid text wrapping inside table rows.
+
+📝Referents use [row#column] format:
+
+🔹[a#b] ▸ cell
+
+🔹[a#] ▸ row
+
+🔹[#b] ▸ column
+
+## SJTL⬛
+
+# 1️⃣ADDENDA
+
+## 2️⃣PROGRESS LOG
+
+🔹JET-261001▸added a few symbols 
+
+🔹JET-260915▸Added a few symbols: wall, diagram-V1a
+
+🔹JET-260228▸Final clarifications before posting SJTL-V1
+
+🔹JET/GPT-260223▸ Improved LLM guideline readability with GPT. 
+
+🔹JET-260222 ▸renamed as sysjet markup language (SJTL), completed , V1 ready for review. Added incremental marker and clarified table def.
+
+🔹GPT-260219▸ ChatGPT assists in optimizing glyph set, avoiding ambiguous glyphs.
+
+🔹JET:260115▸ Begin design of Markup Language to optimize Meca Sapiens Blueprint content. 
+
+## 2️⃣CONTACT
+
+[📧](mailto:sysjet@gmail.com) Jean Tardy
+
+Jean Tardy site▸🌐https://jetardy.com
+
+AI/LLM Resource▸🌐https://mecasapiens.com
+
+©️Jean E. Tardy, 2026
+
+
+
+
+
+
+
