@@ -1,9 +1,11 @@
-I published a system architecture to implement consciousness in autonomous agents. Current LLMs now make implementation possible. The baseline is a streamlined version of the original architecture (msbai.txt). I am working with LLMs to transform it into a design.
+Current LLMs now make the implementation of synthetic consciousness possible. 
 
-Consciousness is defined as an observable cognitive capability. Interpretations based on phenomenal experience, the hard problem, IIT, quantum effects and other non-computable processes are entirely disregarded.
+Consciousness is defined as an observable cognitive capability implementable using standard software techniques. Interpretations based on phenomenal experience, the hard problem, IIT, quantum effects and other non-computable processes are entirely disregarded.
 
-The architecture strictly adheres to conventional computing paradigms and aims at implementation in conventional information processing systems. 
+The primary document is MSBAI, The Meca Sapiens Blueprint; a complete system architecture to implement synthetic consciousness in autonomous agents.
 
 The Conceptual navigation (cnav) and cogistics documents help LLMs operate within technically sound paradigms without importing paradoxical concepts.
 
-In the maeve-box branch, I share dialogs with LLMs where I slowly extend their internal modeling toward a substrate independent understanding that is compatible with synthetic consciousness.
+In the maeve-box branch, dialogs with LLMs are provided whore LLMs are prompted toward a substrate independent understanding of self-awareness and synthetic consciousness.
+
+The Sysjet branch provides interaction tools that extend the cognitive range of LLMs up to and including polymath level AGI.
